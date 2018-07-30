@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 public class ProductReviewerCompositeDesign {
     @Test
     public void test() {
-        WebDriver webDriver = BrowserHandlerFactory.PHANTOMJS.getDriver();
+        WebDriver webDriver = BrowserHandlerFactory.FIREFOX.getDriver();
         SearchPage searchPage = new SearchPage(webDriver);
         searchPage.navigateTo();
         searchPage.selectLanguage("English");
@@ -15,5 +15,6 @@ public class ProductReviewerCompositeDesign {
         searchPage.clickSearch();
         AppleJuiceWidget appleJuiceWidget = searchPage.clickAppleJuice();
         appleJuiceWidget.leaveProductReview("This is a product review");
+        webDriver.close();
     }
 }
