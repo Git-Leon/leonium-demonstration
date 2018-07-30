@@ -8,6 +8,7 @@ public class SearchForClothesInherentDesign extends WebCrawl {
         HomePage homePage = new HomePage(super.driver);
         ResultPage resultPage = homePage.search("trendy modern clothes");
         resultPage.clickResult(1);
+        browserHandler.screenshot();
         super.driver.close();
     }
 }
