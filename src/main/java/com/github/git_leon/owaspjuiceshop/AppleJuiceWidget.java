@@ -14,7 +14,7 @@ public class AppleJuiceWidget extends WebPage {
 
 
     public void leaveProductReview(String reviewMessage) {
-        By byInputProductReview = By.id("product_review");
+        By byInputProductReview = By.id("mat-input-1");
         By byButtonSubmit = By.id("submitButton");
         browserHandler.sendKeys(byInputProductReview, reviewMessage);
         browserHandler.click(byButtonSubmit);

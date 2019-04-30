@@ -11,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 public class SearchPage extends WebPage {
     public SearchPage(WebDriver web) {
         super(web);
-        browserHandler.Options.SCREENSHOT_ON_EVENT.setValue(true);
+        browserHandler.options.SCREENSHOT_ON_EVENT.setValue(true);
     }
 
     public String getUrl() {
@@ -23,14 +23,14 @@ public class SearchPage extends WebPage {
     }
 
     public void selectLanguage(String language) {
-        By bySelectLanguage = By.id("languageMenu");
-        By byLanguageNameHopefully = With.text(language);
+        By bySelectLanguage = By.id("mat-select-0");
+        By byLanguageNameHopefully = With.tagAndText("span", "English");
         browserHandler.click(bySelectLanguage);
         browserHandler.click(byLanguageNameHopefully);
-    }
 
+    }
     public void search(String keysToSend) {
-        By byInputSearch = By.className("form-control");
+        By byInputSearch = By.id("searchQuery");
         browserHandler.sendKeys(byInputSearch, keysToSend);
     }
 
@@ -40,7 +40,7 @@ public class SearchPage extends WebPage {
     }
 
     public AppleJuiceWidget clickAppleJuice() {
-        By byImageAppleJuice = With.attributeValue("src", "/public/images/products/apple_juice.jpg");
+        By byImageAppleJuice = With.attributeValue("src", "assets/public/images/products/apple_juice.jpg");
         browserHandler.click(byImageAppleJuice);
         return new AppleJuiceWidget(super.driver);
     }
