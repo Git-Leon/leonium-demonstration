@@ -1,5 +1,5 @@
 # Leonium Demonstration
-* The purpose of this repository is to demonstrate the use of `Leonium`, a `Selenium` wrapper framework.
+* The purpose of this repository is to demonstrate the use of [Leonium](https://github.com/Git-Leon/leonium), a `Selenium` wrapper framework.
 
 ## Usage
 * This dependency is hosted on [packagecloud.io](https://packagecloud.io/git-leon/utils/)
